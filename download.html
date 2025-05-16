@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diário com TerapeutAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #d6e6f2;
+            --accent-color: #3b82f6;
+            --text-color: #1f2937;
+            --bg-color: #ffffff;
+            --dark-bg: #111827;
+            --dark-text: #f3f4f6;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--dark-bg);
+                color: var(--dark-text);
+            }
+
+            footer {
+                color: #9ca3af;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .mockup {
+            max-width: 360px;
+            flex: 1;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .features {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .feature img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .feature-text {
+            font-size: 1.1rem;
+        }
+
+        .cta {
+            text-align: left;
+            padding-left: 0;
+            margin-top: 2rem;
+        }
+
+        .cta img {
+            display: inline-block;
+            max-width: 220px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            padding: 2rem 1rem;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .features {
+                width: 100%;
+                text-align: center;
+                padding: 0 1rem;
+            }
+
+            .feature {
+                justify-content: center;
+                text-align: left;
+            }
+
+            .mockup {
+                width: 100%;
+                max-width: 360px;
+                margin-bottom: 2rem;
+            }
+
+            .cta {
+                text-align: center;
+                padding: 2rem 0;
+            }
+
+            .cta img {
+                margin: 0 auto;
+            }
+        }
+
+        .features {
+            width: 100%;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .feature {
+            justify-content: center;
+            text-align: left;
+        }
+
+        .mockup {
+            width: 100%;
+            max-width: 360px;
+            margin-top: 2rem;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .cta img {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="animated">
+        <img src="assets/logo.png" alt="Ícone do app" style="width: 220px; height: auto; margin-bottom: 2rem;" />
+        <h1>Diário com TerapeutAI</h1>
+        <p>Um espaço acolhedor para registrar seus sentimentos e receber feedbacks gerados pela TerapeutAI.</p>
+    </header>
+
+    <section class="hero-section animated">
+        <div class="features">
+            <div class="feature">
+                <img src="https://img.icons8.com/fluency/48/000000/journal.png" alt="Ícone diário" />
+                <div class="feature-text">Desabafe, organize ideias e registre sentimentos com total privacidade.</div>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/fluency/48/000000/artificial-intelligence.png" alt="Ícone IA" />
+                <div class="feature-text">Sinta-se ouvido: a TerapeutAI lê seus registros e te devolve reflexões únicas.
+                </div>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/fluency/48/000000/privacy.png" alt="Ícone privacidade" />
+                <div class="feature-text">Tudo o que você escreve é só seu. O app guarda com carinho no seu celular.
+                </div>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/fluency/48/000000/goal.png" alt="Ícone metas" />
+                <div class="feature-text">Defina objetivos e acompanhe seu progresso emocional ao longo do tempo.</div>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/fluency/48/000000/calendar.png" alt="Ícone calendário" />
+                <div class="feature-text">Visualize seu humor por períodos no calendário e identifique padrões.</div>
+            </div>
+            <div class="feature">
+                <img src="https://img.icons8.com/fluency/48/000000/idea.png" alt="Ícone reflexão" />
+                <div class="feature-text">Receba reflexões e sugestões com base nos seus registros diários.</div>
+            </div>
+
+            <div class="cta">
+                <a href="https://play.google.com/store/apps/details?id=com.rdc.diarioterapeutai">
+                    <img src="assets/google-play-badge.png" alt="Disponível no Google Play" />
+                </a>
+            </div>
+        </div>
+
+        <div class="mockup">
+            <div style="position: relative; width: 100%; overflow: hidden;">
+                <div class="carousel">
+                    <img src="assets/mockup1.png" alt="Tela do app 1" />
+                    <img src="assets/mockup2.png" alt="Tela do app 2" />
+                    <img src="assets/mockup3.png" alt="Tela do app 3" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.carousel img');
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }, 3000);
+    </script>
+
+    <footer class="animated">
+        &copy; 2025 Diário com TerapeutAI. Todos os direitos reservados.
+    </footer>
+</body>
+
+</html>
